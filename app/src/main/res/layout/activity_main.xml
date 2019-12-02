@@ -1,102 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/animals_types"
-        android:textSize="25sp"
         android:id="@+id/gamesCategory"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Animal Type"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_cow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gamesCategory"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:text="@string/games_cow"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:textSize="35sp"
-        android:id="@+id/text_cow"
-        android:layout_below="@+id/gamesCategory"
-        android:layout_centerHorizontal="true" />
+        android:text="Cow"
+        android:textSize="35sp" />
 
     <ImageView
+        android:id="@+id/games_cow_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/games_cow"
         android:layout_below="@+id/text_cow"
         android:layout_centerHorizontal="true"
-        android:maxHeight="150dp"
-        android:maxWidth="150dp"
-        android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-        android:id="@+id/games_cow_item" />
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/games_cow" />
 
     <ImageView
+        android:id="@+id/games_cow_shadow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/games_cow_shadow"
-        android:maxHeight="150dp"
-        android:maxWidth="150dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
         android:layout_below="@+id/games_cow_item"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/games_cow_shadow"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/games_pig_shadow"
-        android:maxHeight="130dp"
-        android:maxWidth="130dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_below="@+id/games_cow_item"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/games_pig_shadow"/>
+        android:layout_marginStart="20dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/games_cow_shadow" />
 
     <ImageView
+        android:id="@+id/games_pig_shadow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/games_horse_shadow"
-        android:maxHeight="150dp"
-        android:maxWidth="150dp"
-        android:scaleType="fitCenter"
+        android:layout_below="@+id/games_cow_item"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
         android:adjustViewBounds="true"
+        android:maxWidth="130dp"
+        android:maxHeight="130dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/games_pig_shadow" />
+
+    <ImageView
+        android:id="@+id/games_horse_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/games_cow_shadow"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:layout_below="@+id/games_cow_shadow"
-        android:id="@+id/games_horse_shadow"/>
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/games_horse_shadow" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NEXT"
         android:id="@+id/button5"
-        android:layout_below="@+id/games_horse_shadow"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK"
+        android:layout_below="@+id/games_horse_shadow"
+        android:layout_alignParentEnd="true"
+        android:text="NEXT" />
+
+    <Button
         android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="BACK" />
 
 </RelativeLayout>

@@ -12,7 +12,9 @@ import android.widget.ImageView;
 
 public class GamesAnimals extends AppCompatActivity {
 
-    private ImageView option, choice1, choice2, choice3;
+    private ImageView choice1;
+    private ImageView choice2;
+    private ImageView choice3;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,13 +28,13 @@ public class GamesAnimals extends AppCompatActivity {
 
         //View to drag
 
-        option = (ImageView)findViewById(R.id.games_cow_item);
+        ImageView option = (ImageView) findViewById(R.id.games_cow_item);
 
         //Views to drop unto
 
-        choice1 = (ImageView)findViewById(R.id.games_cow_shadow);
-        choice2 = (ImageView)findViewById(R.id.games_pig_shadow);
-        choice3 = (ImageView)findViewById(R.id.games_horse_shadow);
+        choice1 = findViewById(R.id.games_cow_shadow);
+        choice2 = findViewById(R.id.games_pig_shadow);
+        choice3 = findViewById(R.id.games_horse_shadow);
 
         //set touch listener
 
@@ -47,8 +49,8 @@ public class GamesAnimals extends AppCompatActivity {
 
     }
 
-    private final class ChoiceTouchListener implements View.OnTouchListener{
-        public boolean onTouch(View view, MotionEvent motionEvent){
+    private final class ChoiceTouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
                 //setup drag
@@ -59,15 +61,14 @@ public class GamesAnimals extends AppCompatActivity {
                 view.startDrag(data, shadowBuilder, view, 0);
 
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
     }
 
 
-    private class ChoiceDragListener implements View.OnDragListener{
+    private class ChoiceDragListener implements View.OnDragListener {
         @Override
         public boolean onDrag(View v, DragEvent event) {
             //handle drag events
